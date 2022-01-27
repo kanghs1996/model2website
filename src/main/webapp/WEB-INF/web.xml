@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>KangHyunsooProject2</display-name>
+	<context-param>
+		<param-name>JNDI_ROOT</param-name>
+		<param-value>java:comp/env</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>BBS_INDEX</servlet-name>
+		<servlet-class>controller.bbs.IndexController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_INDEX</servlet-name>
+		<url-pattern>/bbs/Index.kosmo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBS_SIGNUP</servlet-name>
+		<servlet-class>controller.bbs.SignUpController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_SIGNUP</servlet-name>
+		<url-pattern>/bbs/SignUp.kosmo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBS_SIGNIN</servlet-name>
+		<servlet-class>controller.bbs.SignInController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_SIGNIN</servlet-name>
+		<url-pattern>/bbs/SignIn.kosmo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBS_SIGNOUT</servlet-name>
+		<servlet-class>controller.bbs.SignOutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_SIGNOUT</servlet-name>
+		<url-pattern>/bbs/SignOut.kosmo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBS_LIST</servlet-name>
+		<servlet-class>controller.bbs.ListController</servlet-class>
+		<init-param>
+			<param-name>PAGE_SIZE</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>BLOCK_PAGE</param-name>
+			<param-value>2</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_LIST</servlet-name>
+		<url-pattern>/bbs/List.kosmo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBS_WRITE</servlet-name>
+		<servlet-class>controller.bbs.WriteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_WRITE</servlet-name>
+		<url-pattern>/bbs/Write.kosmo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBS_VIEW</servlet-name>
+		<servlet-class>controller.bbs.ViewController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_VIEW</servlet-name>
+		<url-pattern>/bbs/View.kosmo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBS_DELETE</servlet-name>
+		<servlet-class>controller.bbs.DeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_DELETE</servlet-name>
+		<url-pattern>/bbs/Delete.kosmo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BBS_EDIT</servlet-name>
+		<servlet-class>controller.bbs.EditController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_EDIT</servlet-name>
+		<url-pattern>/bbs/Edit.kosmo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BBS_MYPAGE</servlet-name>
+		<servlet-class>controller.bbs.MyPageController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_MYPAGE</servlet-name>
+		<url-pattern>/bbs/MyPage.kosmo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BBS_WITHDRAWAL</servlet-name>
+		<servlet-class>controller.bbs.WithdrawalController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_WITHDRAWAL</servlet-name>
+		<url-pattern>/bbs/Withdrawal.kosmo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BBS_RECHECKPASS</servlet-name>
+		<servlet-class>controller.bbs.ReCheckPassController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_RECHECKPASS</servlet-name>
+		<url-pattern>/bbs/ReCheckPass.kosmo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BBS_MEMBEREDIT</servlet-name>
+		<servlet-class>controller.bbs.MemberEditController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_MEMBEREDIT</servlet-name>
+		<url-pattern>/bbs/MemberEdit.kosmo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BBS_RECHECKWITHDRAWAL</servlet-name>
+		<servlet-class>controller.bbs.ReCheckWithdrawalController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_RECHECKWITHDRAWAL</servlet-name>
+		<url-pattern>/bbs/ReCheckWithdrawal.kosmo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BBS_SEARCHLIST</servlet-name>
+		<servlet-class>controller.bbs.SearchListController</servlet-class>
+		<init-param>
+			<param-name>PAGE_SIZE</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>BLOCK_PAGE</param-name>
+			<param-value>2</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BBS_SEARCHLIST</servlet-name>
+		<url-pattern>/bbs/SearchList.kosmo</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
